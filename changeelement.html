@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Element</title>
+</head>
+<body>
+    <div class="listone">
+            <ul id="man">
+                <li>aman</li>
+                <li>jatin</li>
+                <li>raj</li>
+                <li>akash</li>
+            </ul>
+    </div>
+    <br><br>
+    <div class="listtwo">
+            <ul id="girl">
+                <li>moni</li>
+                <li>joyti</li>
+                <li>reena</li>
+                <li>seema</li>
+            </ul>
+    </div>
+
+    <script>
+
+         let listone=document.getElementById("man").children[3];
+        let clone=listone.cloneNode(true);
+        
+        let listtwo=document.getElementById("girl");
+        let a=listtwo.appendChild(clone);
+        // console.log(a);
+        
+        // console.log(a==clone);
+        console.log(a==listtwo.lastElementChild);
+        
+    </script>
+
+    
+</body>
+</html>
